@@ -5,7 +5,7 @@ import com.example.androiddevchallenge.R
 val samplePuppies = listOf(
     Puppy(
         id = 1,
-        name = "Keisha",
+        name = "Philip",
         avatarId = R.drawable.blue,
         breed = "Pit Bull Terrier Mix",
         location = "Cleveland, OH",
