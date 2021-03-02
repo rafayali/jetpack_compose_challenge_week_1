@@ -38,7 +38,7 @@ fun HomeView(navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = "PuppyCo.") },
+                title = { Text(text = "Puppy Co.") },
                 backgroundColor = MaterialTheme.colors.primary,
                 navigationIcon = {
                     Icon(
