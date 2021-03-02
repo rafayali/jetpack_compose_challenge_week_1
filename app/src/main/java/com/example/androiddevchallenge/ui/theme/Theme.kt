@@ -20,30 +20,28 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.androiddevchallenge.MyApp
 
 private val DarkColorPalette = darkColors(
-    primary = purple200,
-    primaryVariant = purple700,
-    secondary = teal200
+    primary = brown500,
+    primaryVariant = brown700,
+    onPrimary = Color.White,
+    secondary = blueGrey,
+    surface = brown500,
 )
 
 private val LightColorPalette = lightColors(
-    primary = purple500,
-    primaryVariant = purple700,
-    secondary = teal200
-
-        /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
+    primary = brown500,
+    primaryVariant = brown700,
     onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    secondary = blueGrey,
+    surface = brown100,
 )
 
 @Composable
-fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
@@ -56,4 +54,20 @@ fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() (
         shapes = shapes,
         content = content
     )
+}
+
+@Preview
+@Composable
+fun AppLight_Preview() {
+    MyTheme(darkTheme = false) {
+        MyApp()
+    }
+}
+
+@Preview
+@Composable
+fun AppDark_Preview() {
+    MyTheme(darkTheme = true) {
+        MyApp()
+    }
 }
