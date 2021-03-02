@@ -51,9 +51,11 @@ fun MyApp() {
             composable(route = "home") { HomeView(navController) }
             composable(
                 route = "detail/{id}",
-                arguments = listOf(navArgument("id") {
-                    type = NavType.IntType
-                })
+                arguments = listOf(
+                    navArgument("id") {
+                        type = NavType.IntType
+                    }
+                )
             ) {
                 PuppyDetailView(
                     navController = navController,
